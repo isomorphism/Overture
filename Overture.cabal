@@ -1,0 +1,23 @@
+Name:                Overture
+Version:             0.2
+Synopsis:            Simple Prelude replacement
+Homepage:            https://github.com/isomorphism/Overture
+License:             BSD3
+License-file:        LICENSE
+Author:              C. McCann
+Maintainer:          cam@uptoisomorphism.net
+Category:            Control,Data
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Library
+  Hs-Source-Dirs: src
+  Build-Depends: base       == 4.*
+               , semigroups == 0.8.*
+               , void       == 0.5.*
+               , these      == 0.1.*
+  Exposed-modules: Overture
+                 , Overture.Control
+                 , Overture.Data
+                 , Overture.Function
+                 , Overture.ExportPrelude

@@ -1,0 +1,13 @@
+module Overture.ExportPrelude ( module Prelude ) where
+
+import Prelude hiding ( (.), id
+                      , foldr, foldr1, foldl, foldl1
+                      , elem, notElem
+                      , sum, product, and, or, all, any, maximum, minimum
+                      , (++), concat, concatMap
+                      , mapM, mapM_, sequence, sequence_
+                      , head, tail, last, init, (!!)
+                      , cycle
+                      , read
+                      )
+
