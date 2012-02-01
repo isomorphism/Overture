@@ -1,5 +1,5 @@
 Name:                Overture
-Version:             0.2
+Version:             0.3
 Synopsis:            Simple Prelude replacement
 Homepage:            https://github.com/isomorphism/Overture
 License:             BSD3
@@ -12,12 +12,16 @@ Cabal-version:       >=1.2
 
 Library
   Hs-Source-Dirs: src
-  Build-Depends: base       == 4.*
-               , semigroups == 0.8.*
-               , void       == 0.5.*
-               , these      == 0.1.*
+  Build-Depends: base           == 4.*
+               , void           == 0.5.*
+               , these          == 0.1.*
+               , contravariant  == 0.1.*
+               , transformers   == 0.2.*
   Exposed-modules: Overture
                  , Overture.Control
+                 , Overture.Control.Category
+                 , Overture.Control.Functor
+                 , Overture.Control.Monad
                  , Overture.Data
                  , Overture.Function
                  , Overture.ExportPrelude
