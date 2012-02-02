@@ -162,3 +162,12 @@ fromEither :: (a -> b) -> Either a b -> b
 fromEither f (Left l)  = f l
 fromEither _ (Right r) = r
 
+-- some missing instances
+
+instance Foldable ((,) a) where
+    foldr f z (_, x) = f x z
+
+instance Traversable ((,) a) where
+    sequenceA (x, y) = (,) x <$> y
+
+
