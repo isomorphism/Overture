@@ -54,6 +54,8 @@ import Prelude ()
 unit :: (Monoid a) => a
 unit = mempty
 
+infixr 5 ++
+
 -- | Alias for 'mappend'
 (++) :: (Monoid a) => a -> a -> a
 (++) = mappend
@@ -161,6 +163,14 @@ eitherToMaybe = either (\_ -> Nothing) Just
 fromEither :: (a -> b) -> Either a b -> b
 fromEither f (Left l)  = f l
 fromEither _ (Right r) = r
+
+-- | Case analysis for 'Bool'.
+bool :: r -> r -> Bool -> r
+bool f _ False = f
+bool _ t True  = t
+
+
+
 
 -- some missing instances
 
